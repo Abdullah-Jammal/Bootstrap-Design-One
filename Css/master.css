@@ -1,0 +1,219 @@
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --orange-color: #ffc400;
+    --red-color: #ff3150;
+    --section-color: #cff4fc;
+}
+body {
+    font-family: 'Roboto', serif;
+}
+.main-btn {
+    background-color: var(--red-color);
+    color: var(--orange-color);
+    font-weight: bold;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.main-btn:hover {
+    color: white;
+}
+.mian-title::before {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 2px;
+        background-color: var(--green-color);
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%);
+    }
+/* Start Nav */
+.navbar {
+    background-color: var(--dark-color);
+}
+.navbar .navbar-toggler {
+    color: white;
+    border: 1px solid white;
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    color: var(--green-color);
+}
+.navbar .navbar-nav .nav-link.active {
+    color: var(--green-color);
+}
+.navbar button i {
+    color: white;
+    border: none;
+}
+.navbar .search i {
+    color: var(--green-color);
+    font-size: 20px;
+    border-left: 1px solid var(--green-color);
+    padding-left: 10px;
+}
+/* End Nav */
+/* Start Landing */
+.landing {
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+/* End Landing */
+/* Start featuers */
+.featuers .icon {
+height: 200px;
+}
+.featuers .icon i {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.featuers .icon .number {
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.featuers .icon .pen {
+    font-size: 5rem;
+    color: var(--green-color);
+}
+.featuers .feat h4 {
+    color: var(--orange-color);
+}
+/* End featuers */
+/* Start Our Work */
+.our-work ul .active {
+    background-color: var(--red-color);
+    color: white;
+    border-radius: 4px;
+}
+.our-work ul li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.our-work ul li:not(.active):hover {
+    color: var(--red-color);
+}
+.our-work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    transform: translateX(calc(-100% - 5px));
+    font-size: 30px;
+    transition: 0.3s;
+    background-color: #ff31504a;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.our-work .box:hover::before {
+    transform: translateX(0);
+    color: white;
+}
+.our-work .box {
+    cursor: pointer;
+}
+/* End Our Work */
+/* Our Stuff */
+@media (max-width: 768px) {
+    .stuff-box {
+        flex-direction: column;
+    }
+    .stuff-box .box-two img {
+        display: none;
+    }
+}
+@media (max-width: 979px) {
+    .stuff-box {
+        flex-direction: column;
+    }
+    .stuff-box .box-two img {
+        display: none;
+        margin-top: 50px;
+    }
+}
+/* Start Team */
+.the-team {
+    background-color: var(--section-color);
+    margin-top: 20px;
+    padding: 10px;
+}
+.the-team .team-info h2 {
+    color: var(--orange-color);
+}
+.the-team .row .one h2 {
+    background-color: var(--green-color);
+    color: white;
+}
+.the-team .row .one p {
+    color: #967a7a;
+}
+/* End Team */
+/* Start Pictures */
+.picture-info {
+    background-color: var(--dark-color);
+}
+/* End Pictures */
+/* Blog */
+.contact {
+    background-color: var(--section-color);
+    margin-top: 30px;
+    padding: 20px;
+}
+.contact .contact-boxes .box {
+    border: 1px solid rgb(189, 146, 146);
+    border-radius: 6px;
+}
+
+.subscribe {
+    background-color: var(--orange-color);
+    padding: 60px;
+}
+@media (max-width: 767px) {
+    .subscribe form {
+        flex-direction: column;
+    }
+    .subscribe button {
+        margin-top: 15px;
+    }
+}
+.subscribe input {
+border-bottom: 2px solid white;
+border-top: none;
+border-right: none;
+border-left: none;
+padding: 15px;
+border-radius: 6px;
+color: white;
+background-color: var(--orange-color);
+}
+.subscribe input:focus {
+    outline: none;
+    }
+.subscribe button {
+background-color: var(--dark-color);
+color: var(--orange-color);
+border: none;
+padding: 10px;
+border-radius: 18px;
+font-size: 18px;
+}
+@media (max-width: 767px) {
+    .pictures .row div img {
+        display: none;
+    }
+}
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+}
